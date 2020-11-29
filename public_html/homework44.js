@@ -1,21 +1,23 @@
 let numbers = [];
 while(numbers.length <=19){
-    numbers.push (prompt("Enter number "));
-    numbers.sort((a, b) => a - b);
+    numbers.push(Number(prompt("Enter number ")));
 }
 
 document.write("Numbers- " + numbers );
 
-let smallest = numbers[0];
+let smallest = Math.min.apply(Math, numbers);
 document.write("<br> Smallest- " + smallest);
 
-let biggest = numbers[19];
+let biggest = Math.max.apply(Math, numbers);
 document.write("<br> Biggest- " + biggest);
 
 let total = 0;
-    total += numbers;
-    
+
+for (var i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+}
+
 document.write("<br> Total sum- " + total);
 
-let average= total/20;
+let average= total/numbers.length;
 document.write("<br> Average- " + average);
