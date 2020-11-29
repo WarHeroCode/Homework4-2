@@ -1,6 +1,6 @@
 let numbers = [];
 while(numbers.length <=19){
-    numbers.push(Number(prompt("Enter number ")));
+    numbers.push (prompt("Enter number "));
     numbers.sort((a, b) => a - b);
 }
 
